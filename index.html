@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Strosnider Chevrolet Reviews - Rate Your Experience</title>
   <meta name="description" content="Share your experience with Strosnider Chevrolet">
-  <meta name="theme-color" content="#000066">
+  <meta name="theme-color" content="#2a5298">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,7 +16,7 @@
     body { 
       font-family: 'Roboto', sans-serif;
       min-height: 100vh;
-      background: #000066;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,12 +31,13 @@
       min-height: 100vh;
     }
     .card {
-      background: rgb(207, 0, 0);
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
       width: 100%;
       padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 8px 30px rgba(0,0,0,0.1);
       text-align: center;
+      border: 1px solid rgba(255,255,255,0.2);
     }
     .logo {
       width: 180px;
@@ -45,17 +46,19 @@
       display: block;
     }
     h1 {
-      color: #001F3F;
+      color: #1a365d;
       font-size: 36px;
       margin-bottom: 30px;
       font-weight: 700;
       letter-spacing: -0.5px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #001F3F;
+      color: #1a365d;
       font-size: 32px;
       margin-bottom: 20px;
       letter-spacing: -0.5px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     .stars {
       margin: 30px 0;
@@ -76,29 +79,33 @@
       transform: scale(1.2) rotate(5deg);
     }
     .stars span.selected { 
-      color: #B8860B;
-      text-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+      color: #f6ad55;
+      text-shadow: 0 0 20px rgba(246, 173, 85, 0.6), 0 0 40px rgba(246, 173, 85, 0.3);
+      filter: drop-shadow(0 0 8px rgba(246, 173, 85, 0.4));
     }
     .submit-button {
-      background: #00FF00;
+      background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
       color: white;
       border: none;
       padding: 18px 40px;
-      border-radius: 30px;
+      border-radius: 50px;
       cursor: pointer;
       font-size: 20px;
       font-weight: 600;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
       margin: 24px auto 0;
       display: block;
       width: 260px;
       text-decoration: none;
       letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+      position: relative;
+      overflow: hidden;
     }
     .submit-button:hover {
-      background: #00CC00;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(66, 153, 225, 0.4), 0 8px 15px rgba(0,0,0,0.1);
     }
     .review-page {
       display: none;
@@ -110,7 +117,7 @@
       opacity: 1;
     }
     .review-page p {
-      color: #444;
+      color: #4a5568;
       font-size: 20px;
       line-height: 1.6;
       margin: 20px 0;
@@ -124,7 +131,7 @@
       display: block;
       margin-top: 20px;
       font-weight: 600;
-      color: #001F3F;
+      color: #1a365d;
       font-size: 18px;
     }
     input, textarea {
@@ -140,8 +147,8 @@
     }
     input:focus, textarea:focus {
       outline: none;
-      border-color: #0170CE;
-      box-shadow: 0 0 0 3px rgba(1, 112, 206, 0.1);
+      border-color: #4299e1;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15), 0 4px 12px rgba(66, 153, 225, 0.1);
     }
     textarea {
       min-height: 140px;
@@ -162,7 +169,7 @@
   <div class="container">
     <div class="card">
       <div id="ratingPage">
-        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <img src="logo.jpg" alt="Chevrolet" class="logo">
         <h1>How Was Your Experience?</h1>
         <div class="stars" id="stars">
           <span data-value="1">★</span>
@@ -177,7 +184,7 @@
       </div>
 
       <div id="googleReview" class="review-page">
-        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <img src="logo.jpg" alt="Chevrolet" class="logo">
         <h2>It Would Mean the World to Us!</h2>
         <p>Thank you for your positive feedback! Your review helps others discover the Strosnider Chevrolet difference.</p>
         <p>Would you take a moment to share your experience on Google?</p>
@@ -187,7 +194,7 @@
       </div>
 
       <div id="feedbackForm" class="review-page">
-        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <img src="logo.jpg" alt="Chevrolet" class="logo">
         <h2>Help Us Improve</h2>
         <p>Your feedback is important to us. Please let us know how we can serve you better.</p>
         <form id="feedback">

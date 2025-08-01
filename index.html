@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Strosnider Chevrolet Reviews - Rate Your Experience</title>
   <meta name="description" content="Share your experience with Strosnider Chevrolet">
-  <meta name="theme-color" content="#385486">
+  <meta name="theme-color" content="#2d3748">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,7 +16,7 @@
     body { 
       font-family: 'Roboto', sans-serif;
       min-height: 100vh;
-      background: #385486;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,13 +31,13 @@
       min-height: 100vh;
     }
     .card {
-      background: white;
+      background: #ffffff;
       width: 100%;
-      padding: 40px 30px;
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 8px 30px rgba(0,0,0,0.1);
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
       text-align: center;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid #e9ecef;
     }
     .logo {
       width: 180px;
@@ -46,19 +46,18 @@
       display: block;
     }
     h1 {
-      color: #1a365d;
-      font-size: 36px;
-      margin-bottom: 30px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      color: #2d3748;
+      font-size: 32px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
     }
     h2 {
-      color: #1a365d;
-      font-size: 32px;
+      color: #2d3748;
+      font-size: 28px;
       margin-bottom: 20px;
-      letter-spacing: -0.5px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      font-weight: 600;
+      letter-spacing: -0.3px;
     }
     .stars {
       margin: 30px 0;
@@ -79,33 +78,31 @@
       transform: scale(1.2) rotate(5deg);
     }
     .stars span.selected { 
-      color: #D1AD57;
-      text-shadow: 0 0 20px rgba(209, 173, 87, 0.6), 0 0 40px rgba(209, 173, 87, 0.3);
-      filter: drop-shadow(0 0 8px rgba(209, 173, 87, 0.4));
+      color: #b8860b;
+      text-shadow: none;
+      filter: none;
     }
     .submit-button {
-      background: #385486;
+      background: #2d3748;
       color: white;
       border: none;
-      padding: 18px 40px;
-      border-radius: 12px;
+      padding: 16px 32px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 20px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin: 24px auto 0;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      margin: 32px auto 0;
       display: block;
-      width: 260px;
+      width: 200px;
       text-decoration: none;
-      letter-spacing: 0.5px;
-      box-shadow: 0 8px 25px rgba(56, 84, 134, 0.3);
-      position: relative;
-      overflow: hidden;
+      letter-spacing: 0.2px;
+      box-shadow: 0 2px 8px rgba(45, 55, 72, 0.15);
     }
     .submit-button:hover {
-      background: #2c4266;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(56, 84, 134, 0.4), 0 8px 15px rgba(0,0,0,0.1);
+      background: #1a202c;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(45, 55, 72, 0.25);
     }
     .review-page {
       display: none;
@@ -118,9 +115,9 @@
     }
     .review-page p {
       color: #4a5568;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.6;
-      margin: 20px 0;
+      margin: 16px 0;
       font-weight: 400;
     }
     form {
@@ -130,9 +127,9 @@
     label {
       display: block;
       margin-top: 20px;
-      font-weight: 600;
-      color: #1a365d;
-      font-size: 18px;
+      font-weight: 500;
+      color: #2d3748;
+      font-size: 14px;
     }
     input, textarea {
       width: 100%;
@@ -147,8 +144,8 @@
     }
     input:focus, textarea:focus {
       outline: none;
-      border-color: #4299e1;
-      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15), 0 4px 12px rgba(66, 153, 225, 0.1);
+      border-color: #2d3748;
+      box-shadow: 0 0 0 2px rgba(45, 55, 72, 0.1);
     }
     textarea {
       min-height: 140px;

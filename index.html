@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strosnider Chevrolet Reviews - Rate Your Experience</title>
+  <meta name="description" content="Share your experience with Strosnider Chevrolet">
+  <meta name="theme-color" content="#000066">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body { 
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      background: #000066;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: rgb(207, 0, 0);
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .logo {
+      width: 180px;
+      height: auto;
+      margin: 0 auto 24px;
+      display: block;
+    }
+    h1 {
+      color: #001F3F;
+      font-size: 36px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      color: #001F3F;
+      font-size: 32px;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .stars {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .stars span {
+      font-size: 60px;
+      cursor: pointer;
+      color: #ff0000;
+      transition: all 0.3s;
+      transform-origin: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      line-height: 1;
+    }
+    .stars span:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+    .stars span.selected { 
+      color: #B8860B;
+      text-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+    }
+    .submit-button {
+      background: #00FF00;
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      transition: all 0.3s;
+      margin: 24px auto 0;
+      display: block;
+      width: 260px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .submit-button:hover {
+      background: #00CC00;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .review-page {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .review-page.visible {
+      display: block;
+      opacity: 1;
+    }
+    .review-page p {
+      color: #444;
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 20px 0;
+      font-weight: 400;
+    }
+    form {
+      text-align: left;
+      margin-top: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #001F3F;
+      font-size: 18px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 16px;
+      margin: 8px 0;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 18px;
+      transition: all 0.3s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #0170CE;
+      box-shadow: 0 0 0 3px rgba(1, 112, 206, 0.1);
+    }
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    @media (max-width: 600px) {
+      .card {
+        border-radius: 0;
+        min-height: 100vh;
+      }
+      .container {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div id="ratingPage">
+        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <h1>How Was Your Experience?</h1>
+        <div class="stars" id="stars">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+        <button id="submitButton" class="submit-button">
+          Submit Rating
+        </button>
+      </div>
+
+      <div id="googleReview" class="review-page">
+        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <h2>It Would Mean the World to Us!</h2>
+        <p>Thank you for your positive feedback! Your review helps others discover the Strosnider Chevrolet difference.</p>
+        <p>Would you take a moment to share your experience on Google?</p>
+        <a href="https://www.google.com/maps/place/Strosnider+Chevrolet/@37.260572,-77.3246423,744m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89b1a9aef945ef61:0x94f7b22974bd8bce!8m2!3d37.260572!4f-77.3246423!16s%2Fg%2F1tl_01j2!5m1!1e1?entry=ttu" target="_blank" rel="noopener noreferrer" class="submit-button">
+          Leave a Review on Google
+        </a>
+      </div>
+
+      <div id="feedbackForm" class="review-page">
+        <img src="logo.avif" alt="Chevrolet" class="logo">
+        <h2>Help Us Improve</h2>
+        <p>Your feedback is important to us. Please let us know how we can serve you better.</p>
+        <form id="feedback">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+          
+          <label for="feedbackText">What could we improve?</label>
+          <textarea id="feedbackText" required></textarea>
+          
+          <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let rating = 0;
+    const stars = document.querySelectorAll('#stars span');
+    const submitButton = document.getElementById('submitButton');
+    const ratingPage = document.getElementById('ratingPage');
+    const googleReview = document.getElementById('googleReview');
+    const feedbackForm = document.getElementById('feedbackForm');
+    
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        rating = parseInt(star.dataset.value);
+        stars.forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+      });
+    });
+
+    submitButton.addEventListener('click', () => {
+      if (rating === 0) {
+        alert('Please select a rating first');
+        return;
+      }
+      
+      ratingPage.style.display = 'none';
+      
+      if (rating === 5) {
+        googleReview.classList.add('visible');
+        if (window.innerWidth > 768) {
+          setTimeout(() => {
+            window.open('https://www.google.com/maps/place/Strosnider+Chevrolet/@37.260572,-77.3246423,744m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89b1a9aef945ef61:0x94f7b22974bd8bce!8m2!3d37.260572!4f-77.3246423!16s%2Fg%2F1tl_01j2!5m1!1e1?entry=ttu', '_blank');
+          }, 1500);
+        }
+      } else {
+        feedbackForm.classList.add('visible');
+      }
+    });
+
+    document.getElementById('feedback').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your feedback! We will use it to improve our service.');
+      window.location.reload();
+    });
+  </script>
+</body>
+</html>

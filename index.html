@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Strosnider Chevrolet Reviews - Rate Your Experience</title>
   <meta name="description" content="Share your experience with Strosnider Chevrolet">
   <meta name="theme-color" content="#2d3748">
@@ -12,6 +12,12 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
     body { 
       font-family: 'Roboto', sans-serif;
@@ -73,6 +79,8 @@
       transform-origin: center;
       text-shadow: 0 2px 4px rgba(0,0,0,0.1);
       line-height: 1;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0,0,0,0.1);
     }
     .stars span:hover {
       transform: scale(1.2) rotate(5deg);
@@ -141,6 +149,10 @@
       font-family: inherit;
       font-size: 18px;
       transition: all 0.3s;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
     }
     input:focus, textarea:focus {
       outline: none;
@@ -151,13 +163,77 @@
       min-height: 140px;
       resize: vertical;
     }
-    @media (max-width: 600px) {
-      .card {
-        border-radius: 0;
-        min-height: 100vh;
-      }
+    @media (max-width: 768px) {
       .container {
-        padding: 0;
+        padding: 20px;
+        max-width: 100%;
+      }
+      .card {
+        padding: 30px 20px;
+        border-radius: 12px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+      .stars {
+        margin: 24px 0;
+        gap: 16px;
+      }
+      .stars span {
+        font-size: 48px;
+        padding: 8px;
+      }
+      .submit-button {
+        width: 100%;
+        padding: 18px 24px;
+        font-size: 18px;
+        margin-top: 24px;
+      }
+      .review-page p {
+        font-size: 16px;
+        margin: 12px 0;
+      }
+      input, textarea {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+      label {
+        font-size: 16px;
+        margin-top: 16px;
+      }
+      .logo {
+        width: 140px;
+        margin-bottom: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .card {
+        padding: 24px 16px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      .stars span {
+        font-size: 44px;
+        padding: 12px;
+      }
+      .submit-button {
+        padding: 16px 20px;
+        font-size: 16px;
+      }
+      .logo {
+        width: 120px;
       }
     }
   </style>
@@ -166,7 +242,7 @@
   <div class="container">
     <div class="card">
       <div id="ratingPage">
-        <img src="logo.jpg" alt="Chevrolet" class="logo">
+        <img src="logo.jpeg" alt="Chevrolet" class="logo">
         <h1>How Was Your Experience?</h1>
         <div class="stars" id="stars">
           <span data-value="1">★</span>
@@ -181,7 +257,7 @@
       </div>
 
       <div id="googleReview" class="review-page">
-        <img src="logo.jpg" alt="Chevrolet" class="logo">
+        <img src="logo.jpeg" alt="Chevrolet" class="logo">
         <h2>It Would Mean the World to Us!</h2>
         <p>Thank you for your positive feedback! Your review helps others discover the Strosnider Chevrolet difference.</p>
         <p>Would you take a moment to share your experience on Google?</p>
@@ -191,7 +267,7 @@
       </div>
 
       <div id="feedbackForm" class="review-page">
-        <img src="logo.jpg" alt="Chevrolet" class="logo">
+        <img src="logo.jpeg" alt="Chevrolet" class="logo">
         <h2>Help Us Improve</h2>
         <p>Your feedback is important to us. Please let us know how we can serve you better.</p>
         <form id="feedback">

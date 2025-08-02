@@ -76,18 +76,17 @@
       line-height: 1;
       touch-action: manipulation;
       -webkit-tap-highlight-color: rgba(0,0,0,0.1);
-      border-radius: 8px;
-      padding: 6px;
-      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      padding: 8px;
+      margin: 4px;
     }
     .stars span:hover {
       transform: scale(1.2) rotate(5deg);
     }
     .stars span.selected { 
       color: #b8860b;
-      text-shadow: none;
+      text-shadow: 0 0 8px rgba(184, 134, 11, 0.4);
       filter: none;
-      background: rgba(255,255,255,0.2);
     }
     .submit-button {
       background: #2d3748;
@@ -238,7 +237,7 @@
   <div class="container">
     <div class="card">
       <div id="ratingPage">
-        <img src="logo.jpeg" alt="Logo" style="max-width: 200px; height: auto; margin-bottom: 20px;">
+
         <h1>How Was Your Experience?</h1>
         <div class="stars" id="stars">
           <span data-value="1">★</span>

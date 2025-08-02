@@ -267,7 +267,7 @@
 
         <h2>Help Us Improve</h2>
         <p>Your feedback is important to us. Please let us know how we can serve you better.</p>
-        <form id="feedback" action="https://formspree.io/f/xqaldbpy" method="POST" onsubmit="return handleFeedbackSubmit(event)">
+        <form id="feedback" action="https://formspree.io/f/myzpdjwl" method="POST" onsubmit="return handleFeedbackSubmit(event)">
           <label>
             Name:
             <input type="text" name="name" id="name" required>
@@ -283,12 +283,9 @@
           <button type="submit" class="submit-button">Submit Feedback</button>
         </form>
       </div>
-      <div id="feedbackConfirmation" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:1000; justify-content:center; align-items:center;">
-        <div style="background:#fff; color:#22306b; padding:32px 24px; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.15); text-align:center; max-width:90vw;">
-          <h2 style="margin-bottom:16px;">Thank You!</h2>
-          <p style="margin-bottom:24px;">Thank you for your feedback! We will use it to improve our service.</p>
-          <button id="closeConfirmation" style="background:#22306b; color:#fff; border:none; border-radius:8px; padding:12px 32px; font-size:16px; cursor:pointer;">OK</button>
-        </div>
+      <div id="feedbackThanks" style="display:none; text-align:center; color:#fff; padding:60px 0;">
+        <h2 style="margin-bottom:16px;">Thank you for your feedback!</h2>
+        <p>We appreciate your input and will use it to improve our service.</p>
       </div>
     </div>
   </div>
@@ -338,7 +335,8 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          document.getElementById('feedbackConfirmation').style.display = 'flex';
+          form.style.display = 'none';
+          document.getElementById('feedbackThanks').style.display = 'block';
         } else {
           alert('There was an error submitting your feedback. Please try again.');
         }
@@ -348,9 +346,6 @@
       });
       return false;
     }
-    document.getElementById('closeConfirmation').onclick = function() {
-      window.location.reload();
-    };
   </script>
 </body>
 </html>
